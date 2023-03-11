@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+    Inner page layout CSS
+--------------------------------------------------------------*/
+
+#primary {
+    float: left;
+    width: 72.5%;
+}
+
+#secondary {
+    float: right;
+    width: 25%;
+}
+
+.left_sidebar {
+    #secondary {
+        float: left;
+    }
+    #primary {
+        float: right;
+    }
+}
+
+.no_sidebar_full_width {
+    #primary {
+        width: 100%;
+        float: none;
+    }
+    #secondary {
+        display: none;
+    }
+}
+
+.no_sidebar_content_centered{
+	#primary{
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.no_sidebar_full_width,
+.no_sidebar_content_centered {
+
+	#primary {
+
+		.entry-content {
+
+			> .alignfull {
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+				max-width: unset;
+
+				&.wp-block-cover,
+				&.wp-block-cover-image {
+					width: unset;
+				}
+			}
+
+			> .alignwide {
+				margin-left: -100px;
+				margin-right: -100px;
+				max-width: unset;
+				width: unset;
+			}
+		}
+	}
+
+}
